@@ -20,10 +20,13 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://venura9.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: venura9
 github_username:  venura9
+google_analytics:
+
+
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

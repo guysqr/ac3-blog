@@ -16,11 +16,9 @@
 title: Part time developer
 email: venura9@venura9.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+I'm an ex-dev, ex-ops and ex-cloud-architect. I dabble a bit in cloud and pickup any intersting things that come my way.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://venura9.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: venura9
 github_username:  venura9
 

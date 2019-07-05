@@ -23,7 +23,7 @@ github_username:  venura9
 
 # Build settings
 markdown: kramdown
-theme: jekyll-clean
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

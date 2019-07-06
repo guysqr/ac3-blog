@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 'Venura Athukorala'
-email: ''
+email: 'venura9 at venura9 dot com'
 description: 'A restart fixes any issue'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://venura9.github.io" # the base hostname & protocol for your site, e.g. http://example.com

@@ -1,0 +1,64 @@
+---
+layout: post
+title: Twitter Status on Your Blog or Website
+date: 2010-02-06 23:37:00.000000000 +11:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Information Technology
+- Internet
+- Social Networking
+tags:
+- PHP
+- Status
+- Twitter
+meta:
+  _edit_last: '6991096'
+  blogger_blog: venura9.blogspot.com
+  blogger_author: Venura Athukoralahttp://www.blogger.com/profile/02057798737869468101noreply@blogger.com
+  blogger_permalink: "/2010/02/show-twitter-status-on-your-blog-or.html"
+  original_post_id: '2'
+  _wp_old_slug: '2'
+  geo_latitude: '0.000000'
+  geo_longitude: '0.000000'
+  geo_accuracy: '0'
+  geo_public: '0'
+  reddit: a:2:{s:5:"count";i:0;s:4:"time";i:1461620255;}
+author:
+  login: venura9
+  email: vathukorala@gmail.com
+  display_name: venura9
+  first_name: ''
+  last_name: ''
+permalink: "/2010/02/06/twitter-status-on-your-blog-or-website/"
+---
+<div class="wlWriterHeaderFooter" style="float:none;margin:0;padding:0;">Everyone wants to show twitter status on their website or blog. This is how that it can be done using PHP. If you are using a Blogging platform such as Wordpress you can use a plug-in that supports embedding PHP code into your blog. There are many providers if you search the listings.</div>
+<p>You can embed the following code directly into Wordpress custom text area with PHP support. There are many twitter widgets available, but most support only a single user. With this you can show the status from multiple accounts. If you increase the count at the end of the URL you will need to check for multiple values inside the function. (<span style="color:#660000;font-family:'Courier New';font-size:10pt;">$twitter_url)</span></p>
+<p>Here Goes the Code:</p>
+<p>[sourcecode language="php"]</p>
+<p>&lt;?php<br />
+function get_plain_status($username)<br />
+{<br />
+  $twitter_url = &quot;http://twitter.com/statuses/user_timeline/$username.xml?count=1&quot;;<br />
+  try {<br />
+    $buffer = @file_get_contents($twitter_url);<br />
+    $xml = new SimpleXMLElement($buffer);<br />
+    $status_item = $xml -&gt; status;<br />
+    $status = $status_item -&gt; text;<br />
+    return &quot;&lt;li&gt;&lt;a href=\&quot;http://twitter.com/$username\&quot;&gt;@$username&lt;/a&gt;: $status&lt;/li&gt;&quot;;<br />
+  } catch (Exception $e) {<br />
+    return &quot;&lt;li&gt;&lt;a href=\&quot;http://twitter.com/$username\&quot;&gt;@$username&lt;/a&gt;&lt;/li&gt;&quot;;<br />
+  }<br />
+}<br />
+echo '&lt;ul&gt;';<br />
+echo get_plain_status('user_1');<br />
+echo get_plain_status('user_2');<br />
+echo get_plain_status('user_3');<br />
+echo get_plain_status('user_4');<br />
+echo '&lt;/ul&gt;';<br />
+?&gt;</p>
+<p>[/sourcecode]</p>
+<p>The twitter URL call sometimes fails due to the load at their servers. So the <strong>try-catch </strong>is used to show a default text at that time. You can put anything you want.</p>

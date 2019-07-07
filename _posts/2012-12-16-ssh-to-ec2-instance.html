@@ -1,0 +1,93 @@
+---
+layout: post
+title: SSH to EC2 Instance
+date: 2012-12-16 14:42:49.000000000 +11:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Information Technology
+- Internet
+- Networking
+- Security
+tags:
+- Amazon Elastic Compute Cloud
+- Amazon Web Services
+- AWS
+- Cloud computing
+- EC2
+- Linux
+- SSH
+- Ubuntu Server
+meta:
+  geo_latitude: '7.072739'
+  geo_longitude: '80.015763'
+  geo_accuracy: '583'
+  geo_public: '1'
+  geo_address: Miriswatta, Gampaha
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:767667771;b:1;}}
+  _wpas_done_2161143: '1'
+  _edit_last: '6991096'
+  publicize_twitter_user: venura9
+  _wpas_done_149781: '1'
+  tagazine-media: a:7:{s:7:"primary";s:0:"";s:6:"images";a:0:{}s:6:"videos";a:0:{}s:11:"image_count";i:0;s:6:"author";s:7:"6991096";s:7:"blog_id";s:7:"6730828";s:9:"mod_stamp";s:19:"2012-12-16
+    09:19:50";}
+  _oembed_25c859d97d0c29f811fb0eb84cb6893d: "{{unknown}}"
+  _oembed_03d31ad09212a88a796f92caf697d537: "{{unknown}}"
+  _oembed_36accb19c84853378c5b03b312c0f5cd: "{{unknown}}"
+  reddit: a:2:{s:5:"count";i:0;s:4:"time";i:1435588982;}
+  _oembed_563d493e8a5fdd01bfdab9790192adb3: "{{unknown}}"
+  _oembed_99236fb5ac1a9a39ce8fde01ccfb15e3: "{{unknown}}"
+  _oembed_c7fe8e3488a1ba617e91b74058dd2a38: "{{unknown}}"
+  _oembed_5ca603f5c94699fd04e807e35e57146c: "{{unknown}}"
+  _oembed_833fd2c3e35669ea410042a9b0200adc: "{{unknown}}"
+  _oembed_938ae78aef27f9b506041f969cd1ce77: "{{unknown}}"
+author:
+  login: venura9
+  email: vathukorala@gmail.com
+  display_name: venura9
+  first_name: ''
+  last_name: ''
+permalink: "/2012/12/16/ssh-to-ec2-instance/"
+---
+<p>I have been working with <a class="zem_slink" title="Amazon Web Services" href="http://www.youtube.com/AmazonWebServices" target="_blank" rel="youtube">AWS</a> (<a class="zem_slink" title="Amazon Web Services" href="http://aws.amazon.com/" target="_blank" rel="homepage">Amazon Web Services</a>) with EC2 (<a class="zem_slink" title="Elastic computing" href="http://en.wikipedia.org/wiki/Elastic_computing" target="_blank" rel="wikipedia">Elastic Computing</a>) instances (Cloud Instances). I had some trouble connecting to them. So I thought of sharing how you could do this in few easy ways.</p>
+<address>At the point of creating the instance you can associate an existing key pair or can create one for you. When you create the key file your key will automatically start downloading. Keep that safe and use it to connect. This will have the "<strong>pem</strong>" extension. Let's say the file is <strong>AWS.pem</strong></address>
+<address> </address>
+<ul>
+<li><strong>Linux Shell</strong></li>
+</ul>
+<p>This is the easiest way as long as you are on linux or cygwin on windows. Assuming you are connecting to an <a class="zem_slink" title="Ubuntu (operating system)" href="http://www.ubuntu.com" target="_blank" rel="homepage">Ubuntu Server</a> instance.</p>
+<p>[sourcecode language="bash"]<br />
+# using a google IP for demonstration purposes</p>
+<p># Using Elastic IP<br />
+ssh -i AWS.pem ubuntu@173.194.38.191</p>
+<p># Using Public DNS<br />
+ssh -i AWS.pem ubuntu@ec2-173-194-38-191.us-west-2.compute.amazonaws.com<br />
+[/sourcecode]</p>
+<ul>
+<li><strong>Using Putty</strong></li>
+</ul>
+<p>Pinehead has a nice video explaining everything about using <a class="zem_slink" title="PuTTY" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank" rel="homepage">Putty</a>. Only difference is the user name is root. For ubuntu server you can't connect as root. It's always "sudo" after connecting using the user "ubuntu"</p>
+<p>[youtube http://www.youtube.com/watch?v=mJaHARCfcA0?rel=0&amp;w=420&amp;h=315&amp;amp]</p>
+<p>Ref:</p>
+<ul>
+<ul>
+<li>
+<address><a href="http://tuts.pinehead.tv/2011/11/21/connect-to-amazon-ec2-using-putty-private-key-on-windows/">http://tuts.pinehead.tv/2011/11/21/connect-to-amazon-ec2-using-putty-private-key-on-windows/</a></address>
+</li>
+<li>
+<address>
+<p style="display:inline!important;"><a href="http://www.htmlgoodies.com/beyond/webmaster/projects/article.php/3904926/Cloud-Computing-Basics-How-To-Connect-Securely-To-Amazon-EC2.htm">http://www.htmlgoodies.com/beyond/webmaster/projects/article.php/3904926/Cloud-Computing-Basics-How-To-Connect-Securely-To-Amazon-EC2.htm</a></p>
+</address>
+</li>
+<li>
+<address style="display:inline!important;"><a href="http://thoughtsandideas.wordpress.com/2012/05/22/connect-to-amazon-ec2-via-putty/">http://thoughtsandideas.wordpress.com/2012/05/22/connect-to-amazon-ec2-via-putty/</a></address>
+</li>
+</ul>
+</ul>
+<ul>
+<li><strong>Other</strong></li>
+</ul>
+<p>Other commercial tools such as XShell which provides free access for non-commercial/personal/student basis have the support built-in. You can just select the keyfile to use when connecting with the user:ubuntu/root and the Elastic IP/Public DNS</p>

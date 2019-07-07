@@ -1,0 +1,48 @@
+---
+layout: post
+title: 'Can not login to MSN with pidgin on Ubuntu/Linux: Fixed'
+date: 2010-11-23 12:28:00.000000000 +11:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Internet
+- Telecommunications
+tags:
+- Linux
+- Live
+- MSN
+- Pidgin
+- Ubuntu
+meta:
+  _edit_last: '6991096'
+  blogger_permalink: "/2010/11/can-not-login-to-msn-with-pidgin-on.html"
+  blogger_author: Venura Athukoralahttp://www.blogger.com/profile/02057798737869468101noreply@blogger.com
+  blogger_blog: venura9.blogspot.com
+  original_post_id: '742'
+  _wp_old_slug: '742'
+  geo_longitude: '0.000000'
+  geo_latitude: '0.000000'
+  geo_accuracy: '0'
+  geo_public: '0'
+  reddit: a:2:{s:5:"count";i:0;s:4:"time";i:1461620298;}
+author:
+  login: venura9
+  email: vathukorala@gmail.com
+  display_name: venura9
+  first_name: ''
+  last_name: ''
+permalink: "/2010/11/23/can-not-login-to-msn-with-pidgin-on-ubuntulinux-fixed/"
+---
+<p>When I try to login to MSN/Live with Ubuntu the following error comes;<br />
+After digging online and trying different things I managed to get it working again.</p>
+<p><span style="color:#0000ff;"><strong>The certificate for omega.contacts.msn.com could not be validated. The certificate chain presented is invalid.</strong></span></p>
+<p>Seems like the certificate for MSN has expired, so you need to add the new one.<br />
+To resolve this, open a new terminal (or Ctrl+Alt+t) and run the below commands respectively;</p>
+<p>[sourcecode language="bash"]</p>
+<p>rm $HOME/.purple/certificates/x509/tls_peers/omega.contacts.msn.com<br />
+wget &quot;http://files.andreineculau.com/projects/pidgin/omega.contacts.msn.com.txt&quot;<br />
+mv omega.contacts.msn.com.txt $HOME/.purple/certificates/x509/tls_peers/omega.contacts.msn.com</p>
+<p>[/sourcecode]</p>

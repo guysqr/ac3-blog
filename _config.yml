@@ -30,3 +30,5 @@ plugins:
 
 disqus:
   shortname: venura9-github-io
+
+google_analytics: UA-11492882-3

@@ -1,27 +1,12 @@
-title: Azure Notepad
-author: Venura Athukorala
-email: 
+title: Developer by Mistake
+author: Venura Athukorala (@venura9)
 description: a restart fixes any issues
+
 # social links
 twitter_username: venura9
 github_username:  venura9
-rss: rss
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
 linkedin_username: venura9
-# pinterest_username: jekyll
-# youtube_username: jekyll
-# googleplus_username: +jekyll
-
-# Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
-
+rss: rss
 
 show_excerpts: false # set to true to show excerpts on the homepage
 

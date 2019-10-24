@@ -6,7 +6,11 @@ author: "Venura Athukorala"
 meta: "Azure, Bastion, Microsoft"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+Despite opening up endpoints to the internet is one of the worst security loopholes known to mankind, we still find cases where the hackers entered via an unsecured public endpoint.
+
+Despite all the contols placed to secure the production workloads a publicly accesible port on the test environment can allow a hacker to enter your infrastructure. 
+
+
 
 ## Some great heading (h2)
 

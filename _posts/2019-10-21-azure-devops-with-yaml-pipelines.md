@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pull Requests taking over Azure"
-categories: "Azure DevOps"
+categories: "Azure_DevOps"
 author: "Venura Athukorala"
 meta: "Azure, Azure DevOps, Microsoft, GitHub Actions"
 ---

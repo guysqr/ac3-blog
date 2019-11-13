@@ -26,11 +26,14 @@ The next two iterations added the finetuning around these features making the fe
 
 ### This is great, looks cool, what does it bring into my organisation?
 
-**Principle of least privilege** – For most of the users they would require no or read-only access to azure and azure devops, once setup all the changes are in version control and it&#39;s yet another Pull-Requests.
+**Principle of least privilege** – For most of the users they would require no or read-only access to azure and azure devops, once setup all the changes are in version control and it's yet another Pull-Requests.
+
+**Single source of truth for change**
+Git history will be your audit log for any change, most of the information is in the reach of few git commands. 
 
 **Streamlined DevOps and DevSecOps**  – Different areas of the source code can have different policies allowing different combinations of individuals and teams review the changes depending on the area of the source code. Including how the deployments and infrastructure changes are orchestrated and approved. With the use of correct tech-stack the secrets will be actually be secrets allowing the development teams to focus on what they do.
 
 DevOps, a bit more than what it was in the past – DevOps will soon go beyond from being a buzz word and you can reap higher benefits by going DevOps as a single tool acting as the all-in-one package.
 ### What's GitHub Actions, Isn't that Similar?
 
-Yes, Microsoft own GitHub. They&#39;ve done a good job with the move not adding the Microsft name to everything not many projects found different homes as predicted before. Why not spread the goodness beyond Azure DevOps and Azure, now you have GitHub actions providing similar features for many-a-clouds including AWS and GCP.
+Yes, Microsoft own GitHub. They've done a good job with the move not adding the Microsft name to everything not many projects found different homes as predicted before. Why not spread the goodness beyond Azure DevOps and Azure, now you have GitHub actions providing similar features for many-a-clouds including AWS and GCP.

@@ -27,7 +27,8 @@ The next two iterations added the finetuning around these features making the fe
 ### This is great, looks cool, what does it bring into my organisation?
 
 **Principle of least privilege** – For most of the users they would require no or read-only access to azure and azure DevOps, once set up all the changes are in version control and it’s yet another Pull-Requests.
-Single source of truth for change Git history will be your audit log for any change, most of the information is in the reach of few git commands.
+
+**Single source of truth for change** - Git history will be your audit log for any change, most of the information is in the reach of few git commands.
 
 **Streamlined DevOps and DevSecOps** – Different areas of the source code can have different policies allowing different combinations of individuals and teams to review the changes depending on the area of the source code. Including how the deployments and infrastructure changes are orchestrated and approved. With the use of correct tech-stack, the secrets will actually be secrets allowing the development teams to focus on what they do.
 

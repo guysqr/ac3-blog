@@ -60,8 +60,8 @@ ssh azureuser@${_public_ip}
 ```bash
 az login --identity
 ```
-<!-- ![Login via Managed Identity on Azure VM](https://venura9.github.io/assets/managed-identity-login-azure-vm.png) -->
-<img src="https://venura9.github.io/assets/managed-identity-login-azure-vm.png" width="480" alt="Login via Managed Identity on Azure VM">
+<!-- ![Login via Managed Identity on Azure VM](https://venura9.github.io/ac3-blog/assets/managed-identity-login-azure-vm.png) -->
+<img src="https://venura9.github.io/ac3-blog/assets/managed-identity-login-azure-vm.png" width="480" alt="Login via Managed Identity on Azure VM">
 
 8. Clean up after we're done. 
 ```bash

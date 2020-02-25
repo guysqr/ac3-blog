@@ -21,8 +21,8 @@ The next two iterations added the finetuning around these features making the fe
 
 ##### Pipelines In Action
 
-![Pipelines In Action](https://venura9.github.io/assets/az-devops.png)
-![Pipelines in Action](https://venura9.github.io/assets/az-devops-1.png)
+![Pipelines In Action](https://venura9.github.io/ac3-blog/assets/az-devops.png)
+![Pipelines in Action](https://venura9.github.io/ac3-blog/assets/az-devops-1.png)
 
 ### This is great, looks cool, what does it bring into my organisation?
 

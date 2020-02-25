@@ -7,7 +7,7 @@ meta: "Azure, Azure CLI, ARM, Azure Resource Manager"
 ---
 
 
-Azure Managed Identitiy, formerly known as Managed Service Identitiy (MSI) has come a long way from being an unstable toggle to ensuring a solid mutual trust between azure resources using Azure Active Directory as the Identity Providor. 
+Azure Managed Identity (formerly known as Managed Service Identity (MSI)) has come a long way, from being an unstable toggle to ensuring a solid mutual trust between Azure resources using Azure Active Directory as the Identity Providor. 
 
 > There are two types of managed identities:
 >
@@ -18,13 +18,12 @@ Azure Managed Identitiy, formerly known as Managed Service Identitiy (MSI) has c
 > Ref: https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/
 
 
-In this blog post, I'm going to explain how you can achieve a unique state, allowing to run Azure CLI from a VM itself using System-Assigned Managed Identity. This allows for scenarios such as performing CRUD operations on azure through a VM. 
-E.g. Self Attach/Detach IP addresses. 
+In this blog post, I'm going to explain how you can achieve a unique state, allowing you to run Azure CLI from a VM itself using System-Assigned Managed Identity. This allows for scenarios such as performing CRUD operations on Azure through a VM. E.g. Self Attach/Detach IP addresses. 
 
-Also, this method does not require passing explicit secrets to authenicate as the secrets are all managed by azure itself. 
+Also, this method does not require passing explicit secrets to authenticate, as the secrets are all managed by Azure itself. 
 
 
-1. Let's login to Azure and select a subscription which you want the resources to be created
+1. Let's login to Azure and select a subscription in which you want the resources to be created
 ```bash
 az login
 _subscription_id='00000000-0000-0000-0000-000000000000' # Insert your subscription id
@@ -36,7 +35,7 @@ az account set --subscription $_subscription_id
 az group create --name myResourceGroup --location australiaeast
 ```
 
-3. Create our linux VM with system assigned managed identity enabled, scope & role also defined. 
+3. Create our Linux VM with system assigned managed identity enabled, scope & role also defined. 
 ```bash
 az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys --assign-identity --location australiaeast --scope "/subscriptions/${_subscription_id}/resourcegroups/myResourceGroup" --role contributor
 ```
@@ -56,7 +55,7 @@ _public_ip=$(az vm list-ip-addresses -g myResourceGroup -n myVM --query "[].virt
 ssh azureuser@${_public_ip}
 ```
 
-7. From the VM just run below to login with Managed Identity (It's always possible to use the custom script extension to run more commands at VM creation)
+7. From the VM just run below to login with Managed Identity (it's always possible to use the custom script extension to run more commands at VM creation)
 ```bash
 az login --identity
 ```
